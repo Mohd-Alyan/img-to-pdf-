@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the site responsive on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Image to PDF Converter</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- jsPDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+
+  <!-- Script file -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>📄 Image to PDF Converter</h1>
+    <p>Upload your images and get a PDF instantly</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Hidden file input -->
+    <input type="file" id="imageInput" accept="image/*" multiple hidden>
+
+    <!-- Drag & Drop Zone -->
+    <label for="imageInput" class="upload-zone" id="dropZone">
+      <i class="fas fa-cloud-upload-alt"></i>
+      <p>Drag & Drop images here<br><span>or click to browse</span></p>
+    </label>
+
+    <!-- Convert Button -->
+    <button id="convertBtn" aria-label="Convert images to PDF">
+      <i class="fas fa-file-pdf"></i> Convert to PDF
+    </button>
+
+    <!-- Image Previews -->
+    <div id="preview"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>✨ Made with ❤️ by Alyan ✨</p>
+  </footer>
+</body>
+</html>

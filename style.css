@@ -1,0 +1,185 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, #6c5ce7, #74b9ff);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  color: white;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-size: 40px;
+  background: linear-gradient(90deg, #ffeaa7, #fab1a0);
+
+  /* Compatibility for gradient text */
+  background-clip: text;            /* Standard */
+  -webkit-background-clip: text;    /* Chrome / Safari */
+  -moz-background-clip: text;       /* Old Firefox */
+
+  -webkit-text-fill-color: transparent; /* Chrome / Safari */
+  -moz-text-fill-color: transparent;    /* Old Firefox */
+  color: transparent;                   /* Fallback */
+}
+
+header p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-top: 8px;
+}
+
+/* Main container */
+.container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 480px;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Upload zone */
+.upload-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #6c5ce7;
+  border-radius: 15px;
+  padding: 40px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  background: #f9f9ff;
+}
+
+.upload-zone i {
+  font-size: 40px;
+  color: #6c5ce7;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.upload-zone p {
+  font-size: 16px;
+  color: #2d3436;
+}
+
+.upload-zone span {
+  font-size: 13px;
+  color: #636e72;
+}
+
+.upload-zone:hover {
+  background: #eceaff;
+  border-color: #4834d4;
+  transform: scale(1.02);
+}
+
+.upload-zone:hover i {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Button */
+button {
+  background: #0984e3;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+button i {
+  margin-right: 8px;
+}
+
+button:hover {
+  background: #0652dd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+button:disabled {
+  background: #b2bec3;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Preview section */
+#preview {
+  margin-top: 25px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+#preview img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #dfe6e9;
+  transition: transform 0.3s;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+#preview img:hover {
+  transform: scale(1.1);
+  border-color: #6c5ce7;
+}
+
+/* Custom Scrollbar */
+#preview::-webkit-scrollbar {
+  height: 8px;
+}
+#preview::-webkit-scrollbar-thumb {
+  background: #6c5ce7;
+  border-radius: 10px;
+}
+#preview::-webkit-scrollbar-track {
+  background: #f1f2f6;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  margin-top: auto;
+  font-size: 14px;
+  text-shadow: 0px 0px 6px rgba(255,255,255,0.6);
+}
+
+/* Smooth fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
