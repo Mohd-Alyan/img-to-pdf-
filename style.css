@@ -23,16 +23,23 @@ header {
 
 header h1 {
   font-size: 40px;
+  color: white; /* Default color for emoji */
+
+  /* Remove gradient from h1 itself */
+  background: none;
+}
+
+header h1 span {
   background: linear-gradient(90deg, #ffeaa7, #fab1a0);
 
-  /* Compatibility for gradient text */
-  background-clip: text;            /* Standard */
-  -webkit-background-clip: text;    /* Chrome / Safari */
-  -moz-background-clip: text;       /* Old Firefox */
+  /* Gradient text for only the span */
+  background-clip: text;            
+  -webkit-background-clip: text;    
+  -moz-background-clip: text;       
 
-  -webkit-text-fill-color: transparent; /* Chrome / Safari */
-  -moz-text-fill-color: transparent;    /* Old Firefox */
-  color: transparent;                   /* Fallback */
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;    
+  color: transparent;                   
 }
 
 header p {
